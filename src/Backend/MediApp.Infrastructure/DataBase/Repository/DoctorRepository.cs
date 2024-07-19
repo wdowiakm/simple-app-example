@@ -1,14 +1,20 @@
 ﻿using System.Collections.Immutable;
 using MediApp.Domain.Models.Doctor;
 using MediApp.Domain.RepositoryInterfaces;
+using MediApp.Infrastructure.DataBase.Context;
 using MediApp.Infrastructure.DataBase.Entities.Doctor;
 
 namespace MediApp.Infrastructure.DataBase.Repository;
 
-public class DoctorQueryRepository : IDoctorQueryRepository
+public class DoctorRepository : IDoctorQueryRepository, IDoctorCommandRepository
 {
-    private Dictionary<Guid, DoctorEntity> _doctors = new();
-    
+    private readonly IInMemoryContext _context;
+
+    public DoctorRepository(IInMemoryContext context)
+    {
+        _context = context;
+    }
+
     public Task<DoctorModel> GetDoctorById(DoctorId doctorId, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
@@ -18,7 +24,7 @@ public class DoctorQueryRepository : IDoctorQueryRepository
     {
         if (filter is null)
         {
-            var doctors = _doctors.Values.Select(d => new DoctorModel(
+            var doctors = _context.Doctors.Values.Select(d => new DoctorModel(
                 new DoctorId(d.Id),
                 new MedicalLicenseNumber(d.LicenseNumber),
                 d.Speciality,
@@ -36,13 +42,6 @@ public class DoctorQueryRepository : IDoctorQueryRepository
     {
         throw new NotImplementedException();
     }
-    
-}
-
-public class DoctorCommandRepository : IDoctorCommandRepository
-{
-    private Dictionary<Guid, DoctorEntity> _doctors = new();
-    
 
     public Task<DoctorModel> AddDoctor(DoctorModel doctorModel, CancellationToken cancellationToken)
     {
@@ -55,7 +54,7 @@ public class DoctorCommandRepository : IDoctorCommandRepository
             LastName = doctorModel.LastName
         };
         
-        _doctors.Add(doctorModel.Id, doctorEntity);
+        _context.Doctors.Add(doctorModel.Id, doctorEntity);
         
         return Task.FromResult(doctorModel);
     }

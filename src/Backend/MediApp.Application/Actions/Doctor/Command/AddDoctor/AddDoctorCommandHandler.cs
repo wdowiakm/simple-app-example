@@ -23,7 +23,7 @@ public class AddDoctorCommandHandler : ICommandHandler<AddDoctorCommand, AddDoct
         var doctorsFilter = new DoctorFilter(LicenseNumber: request.LicenseNumber);
         var doctor = (await _doctorQueryRepository.GetDoctors(doctorsFilter, cancellationToken)).FirstOrDefault();
         
-        if (doctor is null) throw new Exception("Doctor already exists");
+        if (doctor is not null) throw new Exception("Doctor already exists");
         
         var newDoctor = new DoctorModel(
             new DoctorId(),

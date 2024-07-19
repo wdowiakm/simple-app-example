@@ -9,7 +9,6 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Shared\MediApp.Contract\MediApp.Contract.csproj" />
       <ProjectReference Include="..\..\Shared\MediApp.Domain\MediApp.Domain.csproj" />
-      <ProjectReference Include="..\MediApp.Domain\MediApp.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>

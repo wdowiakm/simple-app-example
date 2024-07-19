@@ -1,6 +1,6 @@
 @MediApp_HostAddress = http://localhost:5043
 
-GET {{MediApp_HostAddress}}/weatherforecast/
+GET {{MediApp_HostAddress}}/doctors/
 Accept: application/json
 
 ###

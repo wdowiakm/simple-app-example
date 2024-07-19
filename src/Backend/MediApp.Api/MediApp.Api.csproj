@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Shared\MediApp.Domain\MediApp.Domain.csproj" />
       <ProjectReference Include="..\MediApp.Infrastructure\MediApp.Infrastructure.csproj" />
     </ItemGroup>
 
