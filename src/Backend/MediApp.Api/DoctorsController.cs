@@ -1,4 +1,7 @@
-﻿using MediApp.Application.Actions.Doctor.Command.AddDoctor;
+﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+using MediApp.Application.Actions.Doctor.Command.AddDoctor;
 using MediApp.Application.Actions.Doctor.Query.GetDoctorsList;
 using MediApp.Contract;
 using MediApp.Contract.Doctor;

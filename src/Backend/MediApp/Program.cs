@@ -4,6 +4,8 @@ using MediApp.Application.Actions.Doctor.Query.GetDoctorsList;
 using MediApp.Domain.RepositoryInterfaces;
 using MediApp.Infrastructure.DataBase.Context;
 using MediApp.Infrastructure.DataBase.Repository;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
