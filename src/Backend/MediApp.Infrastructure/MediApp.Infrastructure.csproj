@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Shared\MediApp.Domain\MediApp.Domain.csproj" />
+      <ProjectReference Include="..\MediApp.Application\MediApp.Application.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="DataBase\Context\" />
+      <Folder Include="DataBase\EntitiesConfig\" />
+    </ItemGroup>
+
+</Project>

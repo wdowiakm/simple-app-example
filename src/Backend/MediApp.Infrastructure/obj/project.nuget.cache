@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "B1q9orjlXmLEZiMiPORsd64tGpzB+Z4d8Zf0OL+6vGO1LVa6C/4ktQo1Z0ffriwCjA+0EGjT18kvo2WyZBClLQ==",
+  "success": true,
+  "projectFilePath": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Infrastructure\\MediApp.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wdowi\\.nuget\\packages\\mediatr\\12.3.0\\mediatr.12.3.0.nupkg.sha512",
+    "C:\\Users\\wdowi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\wdowi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

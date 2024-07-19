@@ -1,0 +1,300 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Infrastructure\\MediApp.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Application\\MediApp.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Application\\MediApp.Application.csproj",
+        "projectName": "MediApp.Application",
+        "projectPath": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Application\\MediApp.Application.csproj",
+        "packagesPath": "C:\\Users\\wdowi\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\wdowi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Domain\\MediApp.Domain.csproj": {
+                "projectPath": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Domain\\MediApp.Domain.csproj"
+              },
+              "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Contract\\MediApp.Contract.csproj": {
+                "projectPath": "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Contract\\MediApp.Contract.csproj"
+              },
+              "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Domain\\MediApp.Domain.csproj": {
+                "projectPath": "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Domain\\MediApp.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Domain\\MediApp.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Domain\\MediApp.Domain.csproj",
+        "projectName": "MediApp.Domain",
+        "projectPath": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Domain\\MediApp.Domain.csproj",
+        "packagesPath": "C:\\Users\\wdowi\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\wdowi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Infrastructure\\MediApp.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Infrastructure\\MediApp.Infrastructure.csproj",
+        "projectName": "MediApp.Infrastructure",
+        "projectPath": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Infrastructure\\MediApp.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\wdowi\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\wdowi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Application\\MediApp.Application.csproj": {
+                "projectPath": "D:\\Repos\\simple-app-example\\src\\Backend\\MediApp.Application\\MediApp.Application.csproj"
+              },
+              "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Domain\\MediApp.Domain.csproj": {
+                "projectPath": "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Domain\\MediApp.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Contract\\MediApp.Contract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Contract\\MediApp.Contract.csproj",
+        "projectName": "MediApp.Contract",
+        "projectPath": "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Contract\\MediApp.Contract.csproj",
+        "packagesPath": "C:\\Users\\wdowi\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Contract\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\wdowi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Domain\\MediApp.Domain.csproj": {
+                "projectPath": "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Domain\\MediApp.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Domain\\MediApp.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Domain\\MediApp.Domain.csproj",
+        "projectName": "MediApp.Domain",
+        "projectPath": "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Domain\\MediApp.Domain.csproj",
+        "packagesPath": "C:\\Users\\wdowi\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\simple-app-example\\src\\Shared\\MediApp.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\wdowi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
