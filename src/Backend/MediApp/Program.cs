@@ -4,13 +4,17 @@ using MediApp.Application.Actions.Doctor.Query.GetDoctorsList;
 using MediApp.Domain.RepositoryInterfaces;
 using MediApp.Infrastructure.DataBase.Context;
 using MediApp.Infrastructure.DataBase.Repository;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<PgDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 builder.Services.AddSingleton<IInMemoryContext, InMemoryContext>();
 builder.Services.AddScoped<IDoctorQueryRepository, DoctorRepository>();

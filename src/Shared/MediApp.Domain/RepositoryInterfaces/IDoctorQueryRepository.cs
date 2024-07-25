@@ -1,6 +1,4 @@
 ﻿using System.Collections.Immutable;
-using System.Threading;
-using System.Threading.Tasks;
 using MediApp.Domain.Models.Doctor;
 
 namespace MediApp.Domain.RepositoryInterfaces;

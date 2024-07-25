@@ -25,6 +25,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediApp.Contract", "src\Sha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediApp.Domain", "src\Shared\MediApp.Domain\MediApp.Domain.csproj", "{1F967B1D-0A85-4A11-93A4-062B3254B71F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infr", "infr", "{57CEFF92-1A13-4100-A243-D617557220B7}"
+	ProjectSection(SolutionItems) = preProject
+		infr\postgres.yml = infr\postgres.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediApp.Infrastructure.Migrations", "src\Backend\MediApp.Infrastructure.Migrations\MediApp.Infrastructure.Migrations.csproj", "{CDA0A8EE-0CBA-4A9A-8FF4-1384ADAE1573}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{87D4B562-4551-46D9-9D25-0D3EF4840134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediApp.Infrastructure.FakeData", "test\MediApp.Infrastructure.FakeData\MediApp.Infrastructure.FakeData.csproj", "{9A4021ED-2E72-4125-BA6C-42F879236F2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +50,8 @@ Global
 		{D0AD8C33-8CEE-41FC-A6C1-E7F558D69F01} = {906EA7E3-BFAE-4B95-856D-4B681E552907}
 		{F3DF1785-2D45-4155-A095-D07F484FC7CF} = {D0AD8C33-8CEE-41FC-A6C1-E7F558D69F01}
 		{1F967B1D-0A85-4A11-93A4-062B3254B71F} = {D0AD8C33-8CEE-41FC-A6C1-E7F558D69F01}
+		{CDA0A8EE-0CBA-4A9A-8FF4-1384ADAE1573} = {4EE649F6-E44C-482A-9F13-6D9CD470D3D0}
+		{9A4021ED-2E72-4125-BA6C-42F879236F2B} = {87D4B562-4551-46D9-9D25-0D3EF4840134}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1F967B1D-0A85-4A11-93A4-062B3254B71F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -65,5 +78,13 @@ Global
 		{F3DF1785-2D45-4155-A095-D07F484FC7CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3DF1785-2D45-4155-A095-D07F484FC7CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3DF1785-2D45-4155-A095-D07F484FC7CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA0A8EE-0CBA-4A9A-8FF4-1384ADAE1573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA0A8EE-0CBA-4A9A-8FF4-1384ADAE1573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA0A8EE-0CBA-4A9A-8FF4-1384ADAE1573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA0A8EE-0CBA-4A9A-8FF4-1384ADAE1573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4021ED-2E72-4125-BA6C-42F879236F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4021ED-2E72-4125-BA6C-42F879236F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4021ED-2E72-4125-BA6C-42F879236F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4021ED-2E72-4125-BA6C-42F879236F2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

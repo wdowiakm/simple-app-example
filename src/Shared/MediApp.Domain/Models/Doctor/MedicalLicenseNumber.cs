@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MediApp.Domain.Models.Doctor;
+﻿namespace MediApp.Domain.Models.Doctor;
 
 public record struct MedicalLicenseNumber(string Value)
 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using MediApp.Application.Actions.Base;
+﻿using MediApp.Application.Actions.Base;
 using MediApp.Contract.Doctor;
 using MediApp.Domain.Models.Doctor;
 using MediApp.Domain.RepositoryInterfaces;

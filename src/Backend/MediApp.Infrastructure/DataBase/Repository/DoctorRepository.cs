@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Immutable;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Collections.Immutable;
 using MediApp.Domain.Models.Doctor;
 using MediApp.Domain.RepositoryInterfaces;
 using MediApp.Infrastructure.DataBase.Context;
 using MediApp.Infrastructure.DataBase.Entities.Doctor;
+using Microsoft.EntityFrameworkCore;
 
 namespace MediApp.Infrastructure.DataBase.Repository;
 
 public class DoctorRepository : IDoctorQueryRepository, IDoctorCommandRepository
 {
-    private readonly IInMemoryContext _context;
+    private readonly PgDbContext _context;
 
-    public DoctorRepository(IInMemoryContext context)
+    public DoctorRepository(PgDbContext context)
     {
         _context = context;
     }
@@ -24,22 +21,25 @@ public class DoctorRepository : IDoctorQueryRepository, IDoctorCommandRepository
         throw new NotImplementedException();
     }
 
-    public Task<ImmutableArray<DoctorModel>> GetDoctors(DoctorFilter? filter, CancellationToken cancellationToken)
+    public async Task<ImmutableArray<DoctorModel>> GetDoctors(DoctorFilter? filter, CancellationToken cancellationToken)
     {
         if (filter is null)
         {
-            var doctors = _context.Doctors.Values.Select(d => new DoctorModel(
-                new DoctorId(d.Id),
-                new MedicalLicenseNumber(d.LicenseNumber),
-                d.Speciality,
-                d.FirstName,
-                d.LastName
-            )).ToImmutableArray();
+            var doctors = (await _context.Doctors
+                    .Select(d => new DoctorModel(
+                        new DoctorId(d.Id),
+                        new MedicalLicenseNumber(d.LicenseNumber),
+                        d.Speciality,
+                        d.FirstName,
+                        d.LastName))
+                    .AsNoTracking()
+                    .ToArrayAsync(cancellationToken)) // TODO: remove double conversion for better performance
+                .ToImmutableArray();
             
-            return Task.FromResult(doctors);
+            return doctors;
         }
 
-        return Task.FromResult(ImmutableArray.Create<DoctorModel>());
+        return await Task.FromResult(ImmutableArray.Create<DoctorModel>());
     }
 
     public Task<int> GetDoctorsCount(DoctorFilter? filter, CancellationToken cancellationToken)
@@ -47,7 +47,7 @@ public class DoctorRepository : IDoctorQueryRepository, IDoctorCommandRepository
         throw new NotImplementedException();
     }
 
-    public Task<DoctorModel> AddDoctor(DoctorModel doctorModel, CancellationToken cancellationToken)
+    public async Task<DoctorModel> AddDoctor(DoctorModel doctorModel, CancellationToken cancellationToken)
     {
         var doctorEntity = new DoctorEntity
         {
@@ -58,9 +58,11 @@ public class DoctorRepository : IDoctorQueryRepository, IDoctorCommandRepository
             LastName = doctorModel.LastName
         };
         
-        _context.Doctors.Add(doctorModel.Id, doctorEntity);
+        await _context.Doctors.AddAsync(doctorEntity, cancellationToken);
         
-        return Task.FromResult(doctorModel);
+        await _context.SaveChangesAsync(cancellationToken);
+
+        return (DoctorModel)doctorEntity;
     }
 
     public Task<DoctorModel> EditDoctor(DoctorModel doctorModel, CancellationToken cancellationToken)
